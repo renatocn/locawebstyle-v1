@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>Informações Iniciais - Guia de estilos da Locaweb</title>
+  <title>Componentes - Alternando classes - Guia de estilos da Locaweb</title>
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
@@ -11,7 +11,7 @@
   <link href="../../../assets/stylesheets/manual.css" media="screen" rel="stylesheet" type="text/css" />
 
 </head>
-<body class="manual manual_introducao manual_introducao_informacoes-iniciais manual_introducao_informacoes-iniciais_index">
+<body class="manual manual_componentes manual_componentes_alternando-classes manual_componentes_alternando-classes_index">
 
 <!-- topbar header -->
 <header id="topbar" class="clearfix">
@@ -51,49 +51,77 @@
     </div>
 
 	<aside class="sidebar">
-	<!-- Menu de Informações Iniciais -->
+	<!-- Menu de Componentes -->
 <nav>
 	<h1>Informações</h1>
 	<ul>
-		<li><a href="/locawebstyle-v1/manual/introducao/como-usar">Instalação e como usar</a></li>
-		<li><a href="/locawebstyle-v1/manual/introducao/informacoes-iniciais">Depêndencias e instruções</a></li>
-		<li><a href="/locawebstyle-v1/manual/introducao/praticas-front-end">Prática de escrita de código</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/abas">Abas ou Tabs</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/alertas">Alertas</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/alternando-textos">Alternador de texto</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/alternando-classes">Alternador de classes</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/barra-progresso">Barra de progresso</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/botoes">Botões</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/classes-funcionais">Classes funcionais</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/icones">Ícones</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/labels">Labels</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/modal">Modal ou Lightbox</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/path">Paths</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/tabelas">Tabelas</a></li>
+		<li><a href="/locawebstyle-v1/manual/componentes/tooltip">Tooltip</a></li>
 	</ul>
 </nav>
 
 </aside>
 
 
-		<article class="text">
-		<header>
-			<!-- <h2 class="ico-edit">Aprenda o básico</h2> -->
-			<h1>Dependências do Locaweb Style</h1>
-			<h3>Temos algumas depêndencias e informações importantes antes da diversão.</h3>
-		</header>
+	<article class="text">
+	<header>
+		<h1>Alternando classes</h1>
+		<h3>É possível alternar entre 2 classes no seu projeto utilizando LocawebStyle.</h3>
+	</header>
 
-		<p>O Locaweb Style precisa dos plugins abaixo para funcionar perfeitamente. Sempre recomendamos ter a versão mais atual destes plugins.</p>
+	<p>As vezes surge a necessidade em alternar classes ao clicar em um determinado elemento.</p>
 
-		<h3>Bootstrap</h3>
-		<p>Os estilos e comportamentos foram baseados no <a href="http://twitter.github.com/bootstrap/" class="broken_link">Bootstrap</a>, framework criado pelo <a href="http://twitter.com/mdo/" class="broken_link">Mark Ott</a> e <a href="http://twitter.com/fat" class="broken_link">Jacob Thornton</a> para agilizar a criação de interface do Twitter. </p>
+  <p>É muito comum esse comportamento ser utilizado em <strong>alternância de ícones</strong>, agora ficou muito fácil executar essa funcionalidade.</p>
 
-		<p>Se você não conhece, <a href="http://twitter.github.com/bootstrap/" class="broken_link">visite o github do projeto e conheça já</a>!</p>
+  <p>Basta clicar abaixo e ver a interação visual</p>
 
-		<p>
-			<em>Curiosidade</em> –
-			O Bootstrap utiliza o Normalize, que é um CSS Reset bastante completo. Ele padroniza e compatibiliza alguns problemas de textos e valores padrões em elementos do HTML. O Normalize foi criado pelo <a href="http://twitter.com/necolas" class="broken_link">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal" class="broken_link">Jonathan Neal</a>.
-			<a href="http://necolas.github.com/normalize.css/">Dê uma olhada no projeto</a>
-		</p>
+	<div class="example">
+    <a href="#" class="ico-heart-empty" data-classtoggle="ico-heart-empty,ico-heart-1"></a>
+    <a href="#" class="ico-plus-circle-1" data-classtoggle="ico-plus-circle-1,ico-minus-circle"></a>
+    <a href="#" class="ico-lock-1" data-classtoggle="ico-lock-1,ico-unlock-1"></a>
+    <a href="#" class="ico-folder" data-classtoggle="ico-folder,ico-folder-open"></a>
+  </div>
+<pre class="lang-html prettyprint linenums">
+&lt;a href="#" class="ico-heart-empty" data-classtoggle="ico-heart-empty,ico-heart-1"&gt;&lt;/a&gt;
+&lt;a href="#" class="ico-plus-circle-1" data-classtoggle="ico-plus-circle-1,ico-minus-circle"&gt;&lt;/a&gt;
+&lt;a href="#" class="ico-lock-1" data-classtoggle="ico-lock-1,ico-unlock-1"&gt;&lt;/a&gt;
+&lt;a href="#" class="ico-folder" data-classtoggle="ico-folder,ico-folder-open"&gt;&lt;/a&gt;
+</pre>
 
-		<h3>JQuery</h3>
-		<p>O JQuery é o framework mais utilizado para controle e manipulação de comportamentos de elementos do HTML. Acho que ele dispensa apresentações. <a href="http://jquery.com">Link do projeto</a></p>
+<br><br>
 
-		<h2>Já temos embutido</h2>
-		<h3>Modernizr</h3>
-		<p>A <a href="http://www.modernizr.com/">Modernizr</a> é um script de detecção de compatibilidade e suporte dos browsers ao CSS3 e algumas features do HTML5. Ele avisa se o browser suporta ou não as novidades do W3C, possibilitando a criação de fallbacks para browsers incompatíveis. Assim fica fácil saber quais browsers suportam ou não SVG, canvas, RGBA, drop shadow, gradiente e tudo o mais.</p>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Atributo</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>class</td>
+        <td>A Classe que será exibida ao carregar a página</td>
+      </tr>
+      <tr>
+        <td>data-classtoggle</td>
+        <td>Inserimos 2 classes separadas por (,).<br>O primeiro é o mesma classe carregada no elemento, e o Segundo é a classe que será inserida ao ser clicado.</td>
+      </tr>
+    </tbody>
+  </table>
 
-		<p>Ele foi criado por desenvolvedores renomados como <a href="http://paulirish.com/">Paul Irish</a> e <a href="http://farukat.es/">Faruk Ates</a>. <a href="http://www.modernizr.com/">Site do projeto</a></p>
+</article>
 
-	</article>
 </section>
 <!-- END post content -->
 
